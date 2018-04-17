@@ -25,9 +25,15 @@ $('#submit').click(function(){
 
 $(document).on('click','.giocatori',function(){
   var y = $(this).attr('num')
+  //calcolo la percentuale
+  var a = players[y].twoPoints
+  var b = players[y].threePoints
+  var duepuntiperc = (a*100)/(a+b)
+  var trepuntiperc = (b*100)/(a+b)
+  //inserisco i valori del giocatore nella scheda
   $('#punti').text(players[y].points)
-  $('#2pt').text(players[y].twoPoints)
-  $('#3pt').text(players[y].threePoints)
+  $('#2pt').text(duepuntiperc)
+  $('#3pt').text(trepuntiperc)
   $('#rimbalzi').text(players[y].rebounds)
   $('#falli').text(players[y].fouls)
 })
