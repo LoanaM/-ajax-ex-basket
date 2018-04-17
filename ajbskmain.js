@@ -1,7 +1,8 @@
 players = []
 
 $('#submit').click(function(){
- var k = $('#numberequest').val()
+ var k = $('select').val()
+
  for (i = 0; i < k; i++) {
    var s = 0
     $.ajax ({
