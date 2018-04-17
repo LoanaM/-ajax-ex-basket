@@ -10,22 +10,28 @@
     <div class="boxdescription">
       Quanti giocatori vuoi aggiungere?
     </div>
-    <input type="text" id="numberequest" value="2">
+
+    <select  name="">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option id="numberequest" value="4">4</option>
+    </select>
     <input type="submit" id="submit" value="Inserisci">
 
     <div class="columnplayers">
-      <input type="text" id="play0" num="0" value="" placeholder="Giocatore1">
-      <input type="text" id="play1" value="" placeholder="Giocatore2">
-      <input type="text" id="play2" value="" placeholder="Giocatore3">
-      <input type="text" id="play3" value="" placeholder="Giocatore4">
+      <input type="text" id="play0" num="0" value="" placeholder="Giocatore1" class="giocatori">
+      <input type="text" id="play1" num="1" value="" placeholder="Giocatore2" class="giocatori">
+      <input type="text" id="play2" num="2" value="" placeholder="Giocatore3" class="giocatori">
+      <input type="text" id="play3" num="3" value="" placeholder="Giocatore4" class="giocatori">
 
     </div>
     <div class="schermata">
       <h3>Punti:&nbsp <span id="punti"></span> </h3>
-      <h3>2-Punti %:&nbsp<span></span></h3>
-      <h3>3-Punti %:&nbsp<span></span></h3>
-      <h3>Rimbalzi:&nbsp<span></span></h3>
-      <h3>Falli:&nbsp<span></span></h3>
+      <h3>2-Punti %:&nbsp<span id="2pt"></span></h3>
+      <h3>3-Punti %:&nbsp<span id="3pt"></span></h3>
+      <h3>Rimbalzi:&nbsp<span id="rimbalzi"></span></h3>
+      <h3>Falli:&nbsp<span id="falli"></span></h3>
     </div>
 
     <script src="ajbskmain.js">

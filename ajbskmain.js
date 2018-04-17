@@ -2,20 +2,17 @@ players = []
 
 $('#submit').click(function(){
  var k = $('#numberequest').val()
- for (var i = 0; i < k; i++) {
-
-
+ for (i = 0; i < k; i++) {
+   var s = 0
     $.ajax ({
       url: 'https://www.boolean.careers/api/array/basket?n=1',
       method: "GET",
       success: function(data) {
-
         players.push(data.response[0])
-        // codice = data.response[0].playerCode;
-        // $('#play'+ i).attr('placeholder',codice);
-        // puntiplay1 = data.response[0].points
-        console.log(data.response)
         console.log(players)
+        codice = data.response[0].playerCode
+        $('#play'+s).attr('placeholder',codice)
+        s++
       },
       error: function(){
         alert('error');
@@ -23,9 +20,14 @@ $('#submit').click(function(){
     });
 
  }
+
 })
 
-$(document).on('click','#play0',function(){
+$(document).on('click','.giocatori',function(){
   var y = $(this).attr('num')
   $('#punti').text(players[y].points)
+  $('#2pt').text(players[y].twoPoints)
+  $('#3pt').text(players[y].threePoints)
+  $('#rimbalzi').text(players[y].rebounds)
+  $('#falli').text(players[y].fouls)
 })
